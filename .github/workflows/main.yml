@@ -25,6 +25,6 @@ jobs:
           distribution: 'adopt'
           package: '*.jar'
       - name: Publish package
-        run: mvn --batch-mode deploy
+        run: mvn --batch-mode deploy -DaltDeploymentRepository=myreposid::default::https://github.com/thiagobsn/POSTECH_SOAT_DevOps_Desafio_Disciplina
         env:
           GITHUB_TOKEN: ${{ secrets.GB_TOKEN }}
